@@ -1,0 +1,8 @@
+# 1. Install Streamlit dashboard engine dependency
+pip install streamlit
+
+# 2. Fire up the Live Factory Dashboard Server in your first terminal view
+streamlit run dashboard.py
+
+# 3. Open a second terminal interface panel alongside, and launch the Orchestration Swarm
+python orchestrator.py
