@@ -1,0 +1,6 @@
+# Terminal 1: Spin up your stream dashboard tracking matrix
+pip install streamlit fastapi uvicorn pydantic pytest pytest-asyncio httpx
+streamlit run dashboard.py
+
+# Terminal 2: Initialize your multi-agent code compilation loops
+python orchestrator.py
