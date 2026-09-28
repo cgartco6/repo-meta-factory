@@ -1,0 +1,9 @@
+{
+  "name": "AI Agency Factory Command Workspace",
+  "short_name": "AIAgencyFactory",
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/"
+}
