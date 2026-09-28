@@ -1,0 +1,6 @@
+# From your root agency-meta-factory directory:
+echo " " > backend/__init__.py
+echo " " > backend/core_orchestrator/__init__.py
+echo " " > backend/branding_studio/__init__.py
+echo " " > backend/design_studio/__init__.py
+echo " " > backend/marketing_studio/__init__.py
