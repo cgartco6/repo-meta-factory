@@ -1,0 +1,37 @@
+name: Agency Meta-Factory Quality & Security Lockdown Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lockdown-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone Code Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Python Runtime Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install System Engine Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+
+    - name: Execute Autonomous Self-Healing Validation Verification
+      env:
+        DATABASE_URL: sqlite:///./ci_test_lockdown.db
+        ANTHROPIC_API_KEY: mock_ci_token
+        OPENAI_API_KEY: mock_ci_token
+        REPLICATE_API_TOKEN: mock_ci_token
+      run: |
+        # Set path contexts to find sub-modules cleanly
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/backend
+        python backend/lockdown_check.py
