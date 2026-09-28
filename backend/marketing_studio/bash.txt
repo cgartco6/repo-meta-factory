@@ -1,0 +1,5 @@
+# Set your environment variables location paths context
+export PYTHONPATH=$PYTHONPATH:$(pwd)/backend
+
+# Run the final validation pipeline sweep
+python backend/lockdown_check.py
