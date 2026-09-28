@@ -1,0 +1,11 @@
+# 1. Navigate into the backend root directory
+cd backend
+
+# 2. Set the python path location variables explicitly to resolve local project folders
+# For Windows Command Prompt (cmd):
+set PYTHONPATH=%cd%
+# For Windows PowerShell:
+$env:PYTHONPATH=$(Get-Location).Path
+
+# 3. Run your automated integration test script
+python simulate_client_pipeline.py
